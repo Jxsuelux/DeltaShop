@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delta Shop</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background-image: url('Fondo.jpg'); /* Ruta a tu imagen */
+            background-size: auto; /* Mantiene el tamaño original de la imagen */
+            background-position: top left; /* Inicia la imagen desde la esquina superior izquierda */
+            background-repeat: repeat-y; /* Repite la imagen verticalmente */
+            /* Eliminamos height: 100vh; para que el fondo se repita según sea necesario */
+        }
+        /* Header */
+        header {
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+            color: #fff;
+            padding: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        header img {
+            height: 30px;
+        }
+        nav {
+            display: flex;
+            gap: 1rem;
+        }
+        nav a {
+            color: #fff;
+            text-decoration: none;
+        }
+        /* Hero Section */
+        .hero {
+            height: 500px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero button {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            border: 1px solid #fff;
+            padding: 0.75rem 1.5rem;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+        /* Products Section */
+        .products {
+            padding: 2rem;
+        }
+        .products h2 {
+            text-align: left;
+            margin-bottom: 1.5rem;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Dos columnas */
+            gap: 1.5rem;
+        }
+        .product-card {
+            background-color: #111;
+            padding: 1rem;
+            text-align: center;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 0.5rem;
+        }
+        .product-title {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: #fff; /* Asegura que el texto sea visible */
+        }
+        .product-price {
+            color: #777; /* Color del precio */
+        }
+        /* Footer */
+        footer {
+            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+            <img src="logo.png" alt="logo">  <!-- Reemplaza con la URL de tu logo -->
+        </div>
+        <nav>
+            <a href="#">FAST DELIVERY WITHIN THE STATE</a>
+        </nav>
+        <div>
+            <!-- Iconos de búsqueda, usuario y carrito -->
+        </div>
+    </header>
+    <section class="hero">
+        <h1>Keep grinding, the bag won’t chase itself</h1>
+        <button>Shop all</button>
+    </section>
+    <section class="products">
+        <h2>Featured products</h2>
+        <div class="products-grid">
+            <!-- Producto 1 -->
+            <div class="product-card">
+                <a href="airpods.html">
+                    <img src="Airpods 2.png" alt="AirPods 2">
+                    <h3 class="product-title">AirPods 2</h3>
+                </a>
+                <p class="product-price">Sold out</p>
+            </div>
+            <!-- Producto 2 -->
+            <div class="product-card">
+                <a href="yeezy.html">
+                    <img src="yeezy.png">
+                    <h3 class="product-title">Yeezy Slides</h3>
+                </a>
+                <p class="product-price">Sold out</p>
+            </div>
+            <!-- Producto 3 -->
+            <div class="product-card">
+                <a href="airpods 3.html">
+                    <img src="airpods 3.png" alt="Airpods Pro 3">
+                    <h3 class="product-title">Airpods Pro 3</h3>
+                </a>
+                <p class="product-price">Sold out</p>
+            </div>
+            <!-- Producto 4 -->
+            <div class="product-card">
+                <img src="" alt="Unknown">
+                <h3 class="product-title">Coming soon</h3>
+                <p class="product-price">Sold out</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+    </footer>
+</body>
+</html>
