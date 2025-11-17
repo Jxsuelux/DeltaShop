@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dandy Hats</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #fff;
+            background-image: url('fondo.jpg');
+            background-size: cover;
+            background-position: center;
+            background-repeat: repeat-y;
+        }
+        header {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+        }
+        .products {
+            padding: 2rem;
+        }
+        .products h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            justify-content: center;
+        }
+        .product-card {
+            background-color: #111;
+            padding: 1rem;
+            text-align: center;
+        }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 0.5rem;
+        }
+        .product-title {
+            font-size: 1rem;
+            margin-bottom: 0.5rem;
+            color: #fff;
+        }
+        .sold-out {
+            color: #777;
+        }
+        footer {
+            background-color: rgba(0, 0, 0, 0.5);
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Dandy Hats</h1>
+    </header>
+    <section class="products">
+        <h2>Our Products</h2>
+        <div class="products-grid">
+            <!-- Productos del 1 al 10 -->
+            <!-- Producto 1 -->
+            <div class="product-card">
+                <img src="1.jpg" alt="Hat 1">
+                <p class="sold-out">Sold Out</p>
+            </div>
+            <!-- Producto 2 -->
+            <div class="product-card">
+                <img src="2.jpg" alt="Hat 2">
+                <p class="sold-out">Sold Out</p>
+            </div>
+            <!-- Producto 3 -->
+            <div class="product-card">
+                <img src="3.jpg" alt="Hat 3">
+                <p class="sold-out">Sold Out</p>
+            </div>
+            <!-- Producto 4 -->
+            <div class="product-card">
+                <img src="4.jpg" alt="Hat 4">
+                <p class="sold-out">Sold Out</p>
+            </div>
+            <!-- Producto 5 -->
+            <div class="product-card">
+                <img src="5.jpg" alt="Hat 5">
+                <p class="sold-out">Sold Out</p>
+            </div>
+            <!-- Producto 6 -->
+            <div class="product-card">
+                <img src="6.jpg" alt="Hat 6">
+                <p class="sold-out">Sold Out</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+    </footer>
+</body>
+</html>
