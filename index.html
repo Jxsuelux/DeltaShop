@@ -10,33 +10,41 @@
             margin: 0;
             padding: 0;
             color: #fff;
-            background-image: url('fondo.jpg'); /* Ruta a tu imagen */
-            background-size: auto; /* Mantiene el tamaño original de la imagen */
-            background-position: top left; /* Inicia la imagen desde la esquina superior izquierda */
-            background-repeat: repeat-y; /* Repite la imagen verticalmente */
-            /* Eliminamos height: 100vh; para que el fondo se repita según sea necesario */
+            background-image: url('fondo.jpg');
+            background-size: auto;
+            background-position: top left;
+            background-repeat: repeat-y;
+            overflow-x: hidden;
+            box-sizing: border-box;
         }
-        /* Header */
+
+        *, *::before, *::after {
+            box-sizing: inherit;
+        }
+
         header {
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+            background-color: rgba(0, 0, 0, 0.5);
             color: #fff;
             padding: 1rem;
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
         header img {
             height: 30px;
         }
+
         nav {
             display: flex;
             gap: 1rem;
         }
+
         nav a {
             color: #fff;
             text-decoration: none;
         }
-        /* Hero Section */
+
         .hero {
             height: 500px;
             display: flex;
@@ -46,10 +54,12 @@
             text-align: center;
             color: #fff;
         }
+
         .hero h1 {
             font-size: 3rem;
             margin-bottom: 1rem;
         }
+
         .hero button {
             background-color: rgba(0, 0, 0, 0.5);
             color: #fff;
@@ -58,50 +68,95 @@
             font-size: 1.2rem;
             cursor: pointer;
         }
-        /* Products Section */
+
         .products {
             padding: 2rem;
         }
+
         .products h2 {
             text-align: left;
             margin-bottom: 1.5rem;
         }
+
         .products-grid {
             display: grid;
             grid-template-columns: repeat(2, 1fr); /* Dos columnas */
             gap: 1.5rem;
         }
+
         .product-card {
             background-color: #111;
             padding: 1rem;
             text-align: center;
         }
+
         .product-card img {
             max-width: 100%;
             height: auto;
             margin-bottom: 0.5rem;
         }
+
         .product-title {
             font-size: 1rem;
             margin-bottom: 0.5rem;
-            color: #fff; /* Asegura que el texto sea visible */
+            color: #fff;
         }
+
         .product-price {
-            color: #777; /* Color del precio */
+            color: #777;
         }
-        /* Footer */
+
         footer {
-            background-color: rgba(0, 0, 0, 0.5); /* Fondo semi-transparente */
+            background-color: rgba(0, 0, 0, 0.5);
             color: #fff;
             text-align: center;
             padding: 2rem;
         }
+
+        /* Media Query para dispositivos móviles */
+        @media (max-width: 600px) {
+            .products-grid {
+                grid-template-columns: repeat(2, 1fr); /* Dos columnas en pantallas pequeñas */
+            }
+        }
+
+        /* Estilos para el cuadro de recomendación */
+        .recommendation-box {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background-color: white;
+            color: black;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .recommendation-button {
+            background-color: red;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1rem;
+            margin-top: 10px;
+        }
     </style>
 </head>
 <body>
+    <!-- Cuadro de recomendación -->
+    <div class="recommendation-box" id="recommendationBox">
+        <p>Recomendable abrir la página en su navegador de confianza para una mejor experiencia</p>
+        <button class="recommendation-button" onclick="hideRecommendation()">Continuar</button>
+    </div>
+
     <header>
         <div>
-            <img src="logo.png" alt="logo">  <!-- Reemplaza con la URL de tu logo -->
+            <img src="logo.png" alt="logo">
         </div>
         <nav>
             <a href="#">FAST DELIVERY WITHIN THE STATE</a>
@@ -120,7 +175,7 @@
             <!-- Producto 1 -->
             <div class="product-card">
                 <a href="airpods.html">
-                    <img src="airpods 2.png" alt="AirPods 2">
+                    <img src="Airpods 2.png" alt="AirPods 2">
                     <h3 class="product-title">AirPods 2</h3>
                 </a>
                 <p class="product-price">Sold out</p>
@@ -128,7 +183,7 @@
             <!-- Producto 2 -->
             <div class="product-card">
                 <a href="yeezy.html">
-                    <img src="yeezy.png">
+                    <img src="yeezy.png" alt="Yeezy Slides">
                     <h3 class="product-title">Yeezy Slides</h3>
                 </a>
                 <p class="product-price">Sold out</p>
@@ -149,10 +204,30 @@
                 </a>
                 <p class="product-price">CATEGORIA</p>
             </div>
+            <!-- Producto 5 -->
+            <div class="product-card">
+                <a href="barbas.html">
+                    <img src="barbas.jpg" alt="Barbas hats">
+                    <h3 class="product-title">Barbas hats</h3>
+                </a>
+                <p class="product-price">CATEGORIA</p>
+            </div>
         </div>
     </section>
     <footer>
     </footer>
+
+    <script>
+        function hideRecommendation() {
+            localStorage.setItem('recommendationShown', 'true');
+            document.getElementById('recommendationBox').style.display = 'none';
+        }
+
+        window.onload = function() {
+            if (localStorage.getItem('recommendationShown') === 'true') {
+                document.getElementById('recommendationBox').style.display = 'none';
+            }
+        }
+    </script>
 </body>
-        </html>
-                    
+</html>
